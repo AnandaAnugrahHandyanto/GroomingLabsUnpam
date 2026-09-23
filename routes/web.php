@@ -1,42 +1,24 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\SesiController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/Register', [SesiController::class, 'Register'])->name('Register');
-Route::post('/Register', [SesiController::class, 'createAccount'])->name('Register.post');
-
-// Guest Routes
-Route::middleware(['guest'])->group(function () {
-    Route::get('/', [SesiController::class, 'index'])->name('login');
-    Route::post('/', [SesiController::class, 'login']);
+Route::get('/', function () {
+    return to_route(auth()->check() ? 'dashboard' : 'login');
 });
 
-// Authenticated Routes
-Route::middleware(['auth'])->group(function () {
-    // Group khusus Pelanggan
-    Route::middleware(['userAkses:pelanggan'])->prefix('dashboard/pelanggan')->group(function () {
-        Route::get('/', [DashboardController::class, 'pelanggan']);
-        Route::get('/Barbershop', [DashboardController::class, 'Barbershop']);
-        Route::get('/MUA', [DashboardController::class, 'MUA']);
-        Route::get('/booking', [DashboardController::class, 'booking']);
-        Route::get('/riwayat', [DashboardController::class, 'riwayat']);
-        Route::get('/order', [DashboardController::class, 'order'])->name('pelanggan.order');
-        Route::get('/profile', [DashboardController::class, 'profile'])->name('pelanggan.profile');
-        Route::get('/booking/input', [DashboardController::class, 'bookingInput'])->name('pelanggan.booking.input');
-        });
-    });
+Route::middleware('guest')->group(function (): void {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.store');
+    Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+    Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+});
 
-    // Group khusus Kasir
-    Route::middleware(['userAkses:kasir'])->group(function () {
-        Route::get('/dashboard/kasir', [DashboardController::class, 'kasir']);
-    });
-
-    // Group khusus Admin
-    Route::middleware(['userAkses:admin'])->group(function () {
-        Route::get('/dashboard/admin', [DashboardController::class, 'admin']);
-    });
-
-    // Logout
-    Route::get('/logout', [SesiController::class, 'logout'])->name('logout');
+Route::middleware('auth')->group(function (): void {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/dashboard', [BookingController::class, 'dashboard'])->name('dashboard');
+    Route::post('/bookings', [BookingController::class, 'store'])->middleware('role:customer')->name('bookings.store');
+    Route::patch('/bookings/{booking}/status', [BookingController::class, 'updateStatus'])
+        ->middleware('role:cashier,admin')->name('bookings.status');
+});
