@@ -396,6 +396,269 @@
             box-shadow: 0 0 0 0.25rem rgba(229, 190, 88, 0.15);
             color: #fff;
         }
+
+        .employee-modal-dialog {
+            width: min(560px, calc(100% - 1rem));
+        }
+
+        .employee-modal-content {
+            max-height: min(90vh, 820px);
+            overflow: hidden;
+            border: 1px solid #34313d;
+            border-radius: 0.9rem;
+            background-color: #17171c !important;
+            color: #f5f5f6;
+        }
+
+        .employee-modal-body {
+            overflow-y: auto;
+        }
+
+        .employee-account-list {
+            overflow: hidden;
+            border: 1px solid #302e38;
+            border-radius: 0.8rem;
+        }
+
+        .employee-account-row {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.7rem 0.8rem;
+        }
+
+        .employee-account-row + .employee-account-row {
+            border-top: 1px solid #302e38;
+        }
+
+        .employee-avatar-initial {
+            display: grid;
+            width: 2.25rem;
+            height: 2.25rem;
+            flex: 0 0 auto;
+            place-items: center;
+            border-radius: 50%;
+            background: #382957;
+            color: #c7a6ff;
+            font-weight: 800;
+        }
+
+        .employee-account-details {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .employee-account-name {
+            overflow: hidden;
+            color: #f5f5f6;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .employee-account-meta {
+            color: #92909b;
+            font-size: 0.68rem;
+        }
+
+        .employee-account-status {
+            width: 0.45rem;
+            height: 0.45rem;
+            flex: 0 0 auto;
+            border-radius: 50%;
+            background: #43d59a;
+        }
+
+        .employee-add-toggle {
+            width: 100%;
+            border: 1px solid #382957;
+            border-radius: 0.55rem;
+            background: #292231;
+            color: #c7a6ff;
+            font-weight: 800;
+            padding: 0.72rem 1rem;
+        }
+
+        .employee-add-toggle:hover,
+        .employee-add-toggle:focus-visible {
+            border-color: #7252a8;
+            background: #33283f;
+            color: #e0d1ff;
+        }
+
+        .employee-create-form {
+            border-top: 1px solid #302e38;
+        }
+
+        .employee-form-label {
+            color: #b9b6c2;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 575.98px) {
+            .employee-modal-dialog {
+                width: 100%;
+                margin: 0;
+            }
+
+            .employee-modal-content {
+                max-height: 100vh;
+                min-height: 100vh;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+
+        .report-modal-dialog {
+            max-width: 760px;
+        }
+
+        .report-modal-content {
+            max-height: min(86vh, 900px);
+            background-color: #141419 !important;
+            color: #ffffff;
+        }
+
+        .report-total {
+            background: rgba(229, 190, 88, 0.1);
+            border: 1px solid var(--gold-border);
+            border-radius: 0.9rem;
+        }
+
+        .report-filters .form-dark-input {
+            min-width: 180px;
+            padding-block: 0.55rem;
+        }
+
+        .report-category-btn {
+            background: #1a1a22;
+            border: 1px solid #2a2a36;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.55rem 0.9rem;
+        }
+
+        .report-category-btn:hover,
+        .report-category-btn.active {
+            background: var(--purple-btn);
+            border-color: var(--purple-btn);
+            color: #fff;
+        }
+
+        .report-list {
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 0.85rem;
+        }
+
+        .report-list-heading,
+        .report-transaction {
+            display: grid;
+            grid-template-columns: 76px 1fr 88px;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .report-list-heading {
+            padding: 0.65rem 0.85rem;
+            background: var(--surface-2);
+            color: var(--text-muted);
+            font-size: 0.62rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .report-transaction {
+            min-height: 70px;
+            padding: 0.65rem 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .report-date-time {
+            color: var(--text-muted);
+            font-size: 0.68rem;
+            line-height: 1.5;
+        }
+
+        .report-service-name {
+            overflow: hidden;
+            color: var(--text);
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .report-service-meta {
+            color: var(--text-muted);
+            font-size: 0.66rem;
+        }
+
+        .report-type-badge {
+            display: inline-block;
+            margin-right: 0.3rem;
+            border-radius: 0.25rem;
+            background: rgba(99, 67, 206, 0.2);
+            color: #b6a2ff;
+            font-size: 0.58rem;
+            font-weight: 800;
+            padding: 0.12rem 0.32rem;
+        }
+
+        .report-type-badge.walkin {
+            background: rgba(52, 211, 153, 0.14);
+            color: #6ee7b7;
+        }
+
+        .report-amount {
+            color: var(--gold-primary);
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 575.98px) {
+            .report-modal-content {
+                max-height: 100vh;
+                border: 0;
+                border-radius: 0;
+            }
+
+            .report-filters .form-dark-input {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+
+            .report-category-filter {
+                display: flex;
+                width: 100%;
+            }
+
+            .report-category-btn {
+                flex: 1;
+                padding-inline: 0.45rem;
+            }
+
+            .report-list-heading,
+            .report-transaction {
+                grid-template-columns: 54px minmax(0, 1fr) 66px;
+                gap: 0.45rem;
+                padding-inline: 0.65rem;
+            }
+
+            .report-service-name {
+                font-size: 0.74rem;
+            }
+
+            .report-amount {
+                font-size: 0.68rem;
+            }
+        }
     </style>
 
     <style>
@@ -635,13 +898,13 @@
 
         <section class="row g-2.5 mb-3">
             <div class="col-12 col-md-6">
-                <button class="btn-action-purple" data-bs-toggle="modal" data-bs-target="#employeeModal">
+                <button type="button" class="btn-action-purple" onclick="openEmployeeModal()">
                     <i class="fa-solid fa-user-group fs-5"></i>
                     <span>Kelola Karyawan</span>
                 </button>
             </div>
             <div class="col-12 col-md-6">
-                <button class="btn-action-gold" data-bs-toggle="modal" data-bs-target="#reportModal">
+                <button type="button" class="btn-action-gold" onclick="openReportModal()">
                     <i class="fa-solid fa-sack-dollar fs-5"></i>
                     <span>Laporan Pendapatan</span>
                 </button>
@@ -788,20 +1051,66 @@
 
     <!-- Modal Kelola Karyawan -->
     <div class="modal fade" id="employeeModal" tabindex="-1" aria-labelledby="employeeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content custom-modal-content">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable employee-modal-dialog">
+            <div class="modal-content custom-modal-content employee-modal-content">
                 <div class="modal-header border-bottom border-secondary border-opacity-25 px-4 pt-4 pb-3">
-                    <h5 class="modal-title font-serif text-white fs-4" id="employeeModalLabel">Tambah Karyawan Baru</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div>
+                        <div class="header-sub mb-1" style="color: #a78bfa;">ADMIN PANEL</div>
+                        <h5 class="modal-title font-serif text-white fs-4 mb-0" id="employeeModalLabel">Kelola Karyawan</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" onclick="closeEmployeeModal()" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <form onsubmit="handleAddEmployee(event)">
+                <div class="modal-body employee-modal-body px-4 pt-3 pb-4">
+                    <div class="employee-account-list mb-3" id="employeeAccountList" aria-label="Daftar karyawan aktif">
+                        <div class="employee-account-row">
+                            <span class="employee-avatar-initial" aria-hidden="true">B</span>
+                            <div class="employee-account-details">
+                                <div class="employee-account-name">Budi Santoso</div>
+                                <div class="employee-account-meta">Senior Barber</div>
+                            </div>
+                            <span class="employee-account-status" role="img" aria-label="Aktif"></span>
+                        </div>
+                        <div class="employee-account-row">
+                            <span class="employee-avatar-initial" aria-hidden="true">R</span>
+                            <div class="employee-account-details">
+                                <div class="employee-account-name">Rina Andini</div>
+                                <div class="employee-account-meta">MUA Artist</div>
+                            </div>
+                            <span class="employee-account-status" role="img" aria-label="Aktif"></span>
+                        </div>
+                        <div class="employee-account-row">
+                            <span class="employee-avatar-initial" aria-hidden="true">D</span>
+                            <div class="employee-account-details">
+                                <div class="employee-account-name">Dimas Rizky</div>
+                                <div class="employee-account-meta">Junior Barber</div>
+                            </div>
+                            <span class="employee-account-status" role="img" aria-label="Aktif"></span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="employee-add-toggle mb-3" id="employeeFormToggle" aria-expanded="true" aria-controls="employeeCreateForm" onclick="toggleEmployeeForm()">
+                        <i class="fa-solid fa-plus me-2" aria-hidden="true"></i><span id="employeeFormToggleText">Tambah Karyawan</span>
+                    </button>
+
+                    <form class="employee-create-form pt-3" id="employeeCreateForm" onsubmit="handleAddEmployee(event)">
                         <div class="mb-3">
-                            <label class="form-label small text-muted font-bold">Nama Lengkap</label>
-                            <input type="text" id="newEmpName" required class="form-control form-dark-input" placeholder="Contoh: Hendra Wijaya">
+                            <label for="newEmpName" class="form-label employee-form-label">Nama Lengkap</label>
+                            <input type="text" id="newEmpName" required class="form-control form-dark-input" placeholder="Contoh: Budi Santoso" autocomplete="name">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label small text-muted font-bold">Peran / Posisi</label>
+                            <label for="newEmpUsername" class="form-label employee-form-label">Username</label>
+                            <input type="text" id="newEmpUsername" required class="form-control form-dark-input" placeholder="Contoh: budi.santoso" autocomplete="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newEmpPassword" class="form-label employee-form-label">Password</label>
+                            <input type="password" id="newEmpPassword" required minlength="8" class="form-control form-dark-input" placeholder="Minimal 8 karakter" autocomplete="new-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newEmpPasswordConfirm" class="form-label employee-form-label">Ulangi Password</label>
+                            <input type="password" id="newEmpPasswordConfirm" required minlength="8" class="form-control form-dark-input" placeholder="Ulangi password" autocomplete="new-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newEmpRole" class="form-label employee-form-label">Peran / Posisi</label>
                             <select id="newEmpRole" class="form-select form-dark-input">
                                 <option value="Senior Barber">Senior Barber</option>
                                 <option value="Junior Barber">Junior Barber</option>
@@ -809,8 +1118,9 @@
                                 <option value="Hair Stylist">Hair Stylist</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-action-purple mt-3">
-                            <i class="fa-solid fa-plus"></i> Simpan Data Karyawan
+                        <div class="small text-danger mb-3" id="employeeFormError" role="alert"></div>
+                        <button type="submit" class="btn btn-action-purple w-100">
+                            <i class="fa-solid fa-plus me-1" aria-hidden="true"></i>Buat Akun Karyawan
                         </button>
                     </form>
                 </div>
@@ -820,27 +1130,92 @@
 
     <!-- Modal Laporan Pendapatan -->
     <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content custom-modal-content">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-fullscreen-sm-down report-modal-dialog">
+            <div class="modal-content custom-modal-content report-modal-content">
                 <div class="modal-header border-bottom border-secondary border-opacity-25 px-4 pt-4 pb-3">
-                    <h5 class="modal-title font-serif text-white fs-4" id="reportModalLabel">Laporan Pendapatan</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div>
+                        <div class="header-sub mb-1">ADMIN</div>
+                        <h5 class="modal-title font-serif text-white fs-4 mb-0" id="reportModalLabel">Laporan Pendapatan</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" onclick="closeReportModal()" aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <div class="p-3 mb-3 rounded-3" style="background-color: rgba(229, 190, 88, 0.1); border: 1px solid var(--gold-border);">
+                <div class="modal-body p-3 p-md-4">
+                    <div class="report-total p-3 mb-3">
                         <div class="small text-muted mb-1">Pendapatan Bulan Ini</div>
-                        <div class="h3 fw-extrabold text-gold mb-0">Rp 74.800.000</div>
-                    </div>
-                    <div class="d-flex flex-column gap-2 mb-3">
-                        <div class="d-flex justify-content-between text-muted small">
-                            <span>Pendapatan Barbershop</span>
-                            <span class="text-white font-bold">Rp 48.200.000</span>
-                        </div>
-                        <div class="d-flex justify-content-between text-muted small">
-                            <span>Pendapatan MUA Wisuda</span>
-                            <span class="text-white font-bold">Rp 26.600.000</span>
+                        <div class="h3 fw-extrabold text-gold mb-2">Rp 74.800.000</div>
+                        <div class="d-flex flex-wrap gap-3 small">
+                            <span class="text-muted">Barbershop <strong class="text-white ms-1">Rp 48.200.000</strong></span>
+                            <span class="text-muted">MUA <strong class="text-white ms-1">Rp 26.600.000</strong></span>
                         </div>
                     </div>
+
+                    <div class="report-filters d-flex flex-wrap align-items-center gap-2 mb-3">
+                        <label class="visually-hidden" for="reportDateFilter">Filter tanggal</label>
+                        <select id="reportDateFilter" class="form-select form-dark-input" onchange="filterReportTransactions()">
+                            <option value="all">Semua Tanggal</option>
+                            <option value="2026-09-15">15 Sep</option>
+                            <option value="2026-09-14">14 Sep</option>
+                        </select>
+                        <div class="btn-group report-category-filter" role="group" aria-label="Filter kategori laporan">
+                            <button type="button" class="btn report-category-btn active" aria-pressed="true" onclick="filterReportTransactions('all')">Semua</button>
+                            <button type="button" class="btn report-category-btn" aria-pressed="false" onclick="filterReportTransactions('barber')">Barber</button>
+                            <button type="button" class="btn report-category-btn" aria-pressed="false" onclick="filterReportTransactions('mua')">MUA</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h6 class="text-white fw-bold mb-0">Tabel Pemasukan</h6>
+                        <span class="small text-muted" id="reportTransactionCount">8 transaksi pratinjau</span>
+                    </div>
+                    <div class="report-list" id="reportTransactionList">
+                        <div class="report-list-heading">
+                            <span>Tanggal</span>
+                            <span>Layanan</span>
+                            <span class="text-end">Nominal</span>
+                        </div>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>10:15</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge">Booking</span>Haircut Classic</div><div class="report-service-meta">Budi Santoso</div></div>
+                            <div class="report-amount">Rp 82.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>10:45</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge walkin">Walk-in</span>Shaving Premium</div><div class="report-service-meta">Wahyu · Dimas R.</div></div>
+                            <div class="report-amount">Rp 55.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="mua" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>11:30</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge">Booking</span>MUA Natural Wisuda</div><div class="report-service-meta">Sari D. · Rina A.</div></div>
+                            <div class="report-amount">Rp 385.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>12:00</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge walkin">Walk-in</span>Fade Cut</div><div class="report-service-meta">Wahyu · Budi S.</div></div>
+                            <div class="report-amount">Rp 99.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="mua" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>13:15</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge">Booking</span>Paket Hijab + Makeup</div><div class="report-service-meta">Nadia P. · Rina A.</div></div>
+                            <div class="report-amount">Rp 495.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>14:00</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge">Booking</span>Hair Coloring</div><div class="report-service-meta">Fajar A. · Dimas R.</div></div>
+                            <div class="report-amount">Rp 275.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-15">
+                            <div class="report-date-time">15 Sep<br>14:30</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge walkin">Walk-in</span>Creambath</div><div class="report-service-meta">Wahyu · Yoga P.</div></div>
+                            <div class="report-amount">Rp 61.000</div>
+                        </article>
+                        <article class="report-transaction" data-category="barber" data-date="2026-09-14">
+                            <div class="report-date-time">14 Sep<br>16:20</div>
+                            <div class="min-w-0"><div class="report-service-name"><span class="report-type-badge">Booking</span>Haircut &amp; Beard Trim</div><div class="report-service-meta">Rizky M. · Budi S.</div></div>
+                            <div class="report-amount">Rp 120.000</div>
+                        </article>
+                    </div>
+                    <div class="d-none text-center text-muted small py-4" id="reportEmptyState">Tidak ada transaksi untuk filter ini.</div>
+                    <div class="small text-muted mt-2">Data contoh untuk pratinjau laporan.</div>
                     <button class="btn btn-action-gold" onclick="downloadReport()">
                         <i class="fa-solid fa-file-arrow-down"></i> Unduh Laporan PDF
                     </button>
@@ -882,49 +1257,222 @@
             triggerToast('Notifikasi', '3 pesanan booking baru membutuhkan konfirmasi.');
         }
 
+        function openEmployeeModal() {
+            const modalEl = document.getElementById('employeeModal');
+            const backdrop = document.createElement('div');
+
+            backdrop.id = 'employeeModalBackdrop';
+            backdrop.className = 'modal-backdrop fade show';
+            backdrop.addEventListener('click', closeEmployeeModal, { once: true });
+            document.body.appendChild(backdrop);
+
+            modalEl.style.display = 'block';
+            modalEl.classList.add('show');
+            modalEl.setAttribute('aria-hidden', 'false');
+            modalEl.setAttribute('aria-modal', 'true');
+            modalEl.setAttribute('role', 'dialog');
+            document.body.classList.add('modal-open');
+            document.addEventListener('keydown', handleEmployeeModalKeydown);
+            modalEl.querySelector('.btn-close').focus();
+        }
+
+        function closeEmployeeModal() {
+            const modalEl = document.getElementById('employeeModal');
+
+            modalEl.style.display = 'none';
+            modalEl.classList.remove('show');
+            modalEl.setAttribute('aria-hidden', 'true');
+            modalEl.removeAttribute('aria-modal');
+            modalEl.removeAttribute('role');
+            document.body.classList.remove('modal-open');
+            document.removeEventListener('keydown', handleEmployeeModalKeydown);
+            document.getElementById('employeeModalBackdrop')?.remove();
+        }
+
+        function handleEmployeeModalKeydown(event) {
+            if (event.key === 'Escape') {
+                closeEmployeeModal();
+            }
+        }
+
+        function toggleEmployeeForm() {
+            const form = document.getElementById('employeeCreateForm');
+            const toggle = document.getElementById('employeeFormToggle');
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+            form.hidden = isExpanded;
+            toggle.setAttribute('aria-expanded', String(!isExpanded));
+            document.getElementById('employeeFormToggleText').textContent = isExpanded ? 'Tambah Karyawan' : 'Tutup Form';
+        }
+
+        function openReportModal() {
+            const modalEl = document.getElementById('reportModal');
+            const backdrop = document.createElement('div');
+
+            backdrop.id = 'reportModalBackdrop';
+            backdrop.className = 'modal-backdrop fade show';
+            backdrop.addEventListener('click', closeReportModal, { once: true });
+            document.body.appendChild(backdrop);
+
+            modalEl.style.display = 'block';
+            modalEl.classList.add('show');
+            modalEl.setAttribute('aria-hidden', 'false');
+            modalEl.setAttribute('aria-modal', 'true');
+            modalEl.setAttribute('role', 'dialog');
+            document.body.classList.add('modal-open');
+            document.addEventListener('keydown', handleReportModalKeydown);
+            modalEl.querySelector('.btn-close').focus();
+        }
+
+        function closeReportModal() {
+            const modalEl = document.getElementById('reportModal');
+            const backdrop = document.getElementById('reportModalBackdrop');
+
+            modalEl.style.display = 'none';
+            modalEl.classList.remove('show');
+            modalEl.setAttribute('aria-hidden', 'true');
+            modalEl.removeAttribute('aria-modal');
+            modalEl.removeAttribute('role');
+            document.body.classList.remove('modal-open');
+            document.removeEventListener('keydown', handleReportModalKeydown);
+            backdrop?.remove();
+        }
+
+        function handleReportModalKeydown(event) {
+            if (event.key === 'Escape') {
+                closeReportModal();
+            }
+        }
+
+        let reportCategoryFilter = 'all';
+
+        function filterReportTransactions(category) {
+            if (category) {
+                reportCategoryFilter = category;
+            }
+
+            document.querySelectorAll('.report-category-btn').forEach(button => {
+                const isActive = button.textContent.trim().toLowerCase() === reportCategoryFilter;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+
+            const selectedDate = document.getElementById('reportDateFilter').value;
+            const transactions = document.querySelectorAll('.report-transaction');
+            let visibleTransactions = 0;
+
+            transactions.forEach(transaction => {
+                const matchesCategory = reportCategoryFilter === 'all' || transaction.dataset.category === reportCategoryFilter;
+                const matchesDate = selectedDate === 'all' || transaction.dataset.date === selectedDate;
+                const isVisible = matchesCategory && matchesDate;
+
+                transaction.classList.toggle('d-none', !isVisible);
+                if (isVisible) {
+                    visibleTransactions++;
+                }
+            });
+
+            document.getElementById('reportTransactionCount').textContent = `${visibleTransactions} transaksi pratinjau`;
+            document.getElementById('reportEmptyState').classList.toggle('d-none', visibleTransactions > 0);
+        }
+
         function downloadReport() {
-            const reportModal = bootstrap.Modal.getInstance(document.getElementById('reportModal'));
-            if (reportModal) reportModal.hide();
+            closeReportModal();
             triggerToast('Unduh Berhasil', 'Laporan pendapatan PDF sedang diunduh.');
         }
 
         function handleAddEmployee(e) {
             e.preventDefault();
-            const name = document.getElementById('newEmpName').value;
+            const name = document.getElementById('newEmpName').value.trim();
+            const username = document.getElementById('newEmpUsername').value.trim();
+            const password = document.getElementById('newEmpPassword').value;
+            const passwordConfirm = document.getElementById('newEmpPasswordConfirm').value;
             const role = document.getElementById('newEmpRole').value;
+            const feedback = document.getElementById('employeeFormError');
 
-            if (!name) return;
+            if (password !== passwordConfirm) {
+                feedback.classList.remove('text-success');
+                feedback.classList.add('text-danger');
+                feedback.textContent = 'Password dan konfirmasi password tidak cocok.';
+                return;
+            }
 
             const isMua = role.includes('MUA');
             const roleClass = isMua ? 'emp-role-mua' : 'emp-role-barber';
+            const accountRow = document.createElement('div');
+            accountRow.className = 'employee-account-row';
 
-            const newCardHtml = `
-                <div class="employee-card">
-                    <div class="d-flex align-items-center gap-3">
-                        <div class="avatar-wrapper">
-                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80" alt="${name}" class="avatar-img">
-                            <span class="status-dot-active"></span>
-                        </div>
-                        <div>
-                            <div class="emp-name">${name}</div>
-                            <div class="${roleClass}">${role}</div>
-                        </div>
-                    </div>
-                    <div class="text-end">
-                        <div class="emp-stats-num">0 layanan</div>
-                        <div class="emp-status-badge">Aktif</div>
-                    </div>
-                </div>
-            `;
+            const accountInitial = document.createElement('span');
+            accountInitial.className = 'employee-avatar-initial';
+            accountInitial.setAttribute('aria-hidden', 'true');
+            accountInitial.textContent = name.charAt(0).toUpperCase();
 
-            document.getElementById('employeeListContainer').insertAdjacentHTML('afterbegin', newCardHtml);
-            
-            document.getElementById('newEmpName').value = '';
-            
-            const empModal = bootstrap.Modal.getInstance(document.getElementById('employeeModal'));
-            if (empModal) empModal.hide();
+            const accountDetails = document.createElement('div');
+            accountDetails.className = 'employee-account-details';
 
-            triggerToast('Karyawan Ditambahkan', `${name} telah ditambahkan sebagai ${role}.`);
+            const accountName = document.createElement('div');
+            accountName.className = 'employee-account-name';
+            accountName.textContent = name;
+
+            const accountMeta = document.createElement('div');
+            accountMeta.className = 'employee-account-meta';
+            accountMeta.textContent = `${username} · ${role}`;
+
+            const accountStatus = document.createElement('span');
+            accountStatus.className = 'employee-account-status';
+            accountStatus.setAttribute('role', 'img');
+            accountStatus.setAttribute('aria-label', 'Aktif');
+
+            accountDetails.append(accountName, accountMeta);
+            accountRow.append(accountInitial, accountDetails, accountStatus);
+            document.getElementById('employeeAccountList').prepend(accountRow);
+
+            const employeeCard = document.createElement('div');
+            employeeCard.className = 'employee-card';
+
+            const identity = document.createElement('div');
+            identity.className = 'd-flex align-items-center gap-3';
+
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar-wrapper';
+
+            const avatarInitial = document.createElement('span');
+            avatarInitial.className = 'employee-avatar-initial';
+            avatarInitial.textContent = name.charAt(0).toUpperCase();
+
+            const statusDot = document.createElement('span');
+            statusDot.className = 'status-dot-active';
+            avatar.append(avatarInitial, statusDot);
+
+            const employeeDetails = document.createElement('div');
+            const employeeName = document.createElement('div');
+            employeeName.className = 'emp-name';
+            employeeName.textContent = name;
+
+            const employeeRole = document.createElement('div');
+            employeeRole.className = roleClass;
+            employeeRole.textContent = role;
+            employeeDetails.append(employeeName, employeeRole);
+            identity.append(avatar, employeeDetails);
+
+            const employeeStats = document.createElement('div');
+            employeeStats.className = 'text-end';
+
+            const serviceCount = document.createElement('div');
+            serviceCount.className = 'emp-stats-num';
+            serviceCount.textContent = '0 layanan';
+
+            const employeeStatus = document.createElement('div');
+            employeeStatus.className = 'emp-status-badge';
+            employeeStatus.textContent = 'Aktif';
+            employeeStats.append(serviceCount, employeeStatus);
+            employeeCard.append(identity, employeeStats);
+            document.getElementById('employeeListContainer').prepend(employeeCard);
+
+            e.currentTarget.reset();
+            feedback.classList.remove('text-danger');
+            feedback.classList.add('text-success');
+            feedback.textContent = `${name} ditambahkan ke daftar pada halaman ini.`;
         }
     </script>
 </body>

@@ -19,7 +19,7 @@ class DashboardController extends Controller
         return view('kasir.Dashboard');
     }
     function admin(){
-        return view('admin.Dashboard');
+        return view('Admin.Dashboard');
     }
 
     function Barbershop(){
