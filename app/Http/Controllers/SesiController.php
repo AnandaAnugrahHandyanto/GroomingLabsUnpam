@@ -29,7 +29,7 @@ class SesiController extends Controller
         }
 
         // Jika BELUM login, tampilkan form login
-        return view('login');
+        return view('Login');
     }
 
     /**
